@@ -7,7 +7,7 @@
 }
 
 :root {
-  --background: #e4ddfd;
+  --background: #e1e1e1;
   --primary-color: #4024ad;
   --black: #000000;
   --white: #ffffff;
@@ -578,7 +578,10 @@ body.thema-dark footer {
     justify-content: center;
     flex-direction: column;
     height: 100%;
-    font-size: 1.75rem;
+  }
+
+  header nav .navegation.open-modal ul a {
+    font-size: 2.25rem;
   }
 
   .header .presentation .social-media {
