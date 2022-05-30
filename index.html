@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio | Mateus Magalhaes - Desenvolvedor Frotend</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <strong>MagalhaesDev</strong>
+        </div>
+        <div class="navegation">
+          <ul>
+            <li>
+              <a href="#about">Sobre</a>
+            </li>
+            <li>
+              <a href="#portfolio">Portfólio</a>
+            </li>
+            <li>
+              <a href="#knowledge">Conhecimentos</a>
+            </li>
+            <li>
+              <a href="#contact">Contato</a>
+            </li>
+          </ul>
+        </div>
+        <div class="thema"></div>
+        <div class="menu">
+          <img
+            src="assets/menu.svg"
+            onclick="openMenuModal()"
+            alt="menu-hamburguer"
+          />
+        </div>
+        <div class="close-modal">
+          <img
+            src="assets/close.svg"
+            onclick="closeMenuModal()"
+            alt="fechar modal"
+          />
+        </div>
+      </nav>
+      <div class="header">
+        <div class="presentation">
+          <div class="message-introduction">
+            <p>Ola, eu me chamo</p>
+            <h1>Mateus Magalhaes</h1>
+            <strong>Desenvolvedor frontend</strong>
+            <small
+              >Utilizo das minhas habilidades e conhecimentos para viabilizar
+              soluçoes.</small
+            >
+            <button>Contacte-me</button>
+          </div>
+
+          <div class="social-media">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/mateus-magalhaes-desenvolvedor/"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1 2.838C1 2.35053 1.19365 1.88303 1.53834 1.53834C1.88303 1.19365 2.35053 1 2.838 1H21.16C21.4016 0.999608 21.6409 1.04687 21.8641 1.13907C22.0874 1.23127 22.2903 1.36661 22.4612 1.53734C22.6322 1.70807 22.7677 1.91083 22.8602 2.13401C22.9526 2.3572 23.0001 2.59643 23 2.838V21.16C23.0003 21.4016 22.9529 21.6409 22.8606 21.8642C22.7683 22.0875 22.6328 22.2904 22.462 22.4613C22.2912 22.6322 22.0884 22.7678 21.8651 22.8602C21.6419 22.9526 21.4026 23.0001 21.161 23H2.838C2.59655 23 2.35746 22.9524 2.1344 22.86C1.91134 22.7676 1.70867 22.6321 1.53798 22.4613C1.3673 22.2905 1.23193 22.0878 1.13962 21.8647C1.04731 21.6416 0.999869 21.4025 1 21.161V2.838ZM9.708 9.388H12.687V10.884C13.117 10.024 14.217 9.25 15.87 9.25C19.039 9.25 19.79 10.963 19.79 14.106V19.928H16.583V14.822C16.583 13.032 16.153 12.022 15.061 12.022C13.546 12.022 12.916 13.111 12.916 14.822V19.928H9.708V9.388ZM4.208 19.791H7.416V9.25H4.208V19.79V19.791ZM7.875 5.812C7.88105 6.08667 7.83217 6.35979 7.73124 6.61532C7.63031 6.87084 7.47935 7.10364 7.28723 7.30003C7.09511 7.49643 6.8657 7.65247 6.61246 7.75901C6.35921 7.86554 6.08724 7.92042 5.8125 7.92042C5.53776 7.92042 5.26579 7.86554 5.01255 7.75901C4.7593 7.65247 4.52989 7.49643 4.33777 7.30003C4.14565 7.10364 3.99469 6.87084 3.89376 6.61532C3.79283 6.35979 3.74395 6.08667 3.75 5.812C3.76187 5.27286 3.98439 4.75979 4.36989 4.38269C4.75539 4.00558 5.27322 3.79442 5.8125 3.79442C6.35178 3.79442 6.86961 4.00558 7.25511 4.38269C7.64062 4.75979 7.86313 5.27286 7.875 5.812V5.812Z"
+                  fill="black"
+                />
+              </svg>
+            </a>
+            <a target="_blank" href="mailto:mateusmagalhaesemidio@gmail.com">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M24 4.50001V19.5C24 20.3513 23.3512 21 22.5 21H21V7.38676L12 13.8518L3 7.38676V21H1.5C0.64875 21 0 20.3513 0 19.5V4.50001C0 4.07401 0.1605 3.69901 0.42975 3.43351C0.569979 3.2932 0.736987 3.18252 0.920845 3.10805C1.1047 3.03358 1.30166 2.99684 1.5 3.00001H2.00025L12 10.2503L21.9998 3.00001H22.5C22.926 3.00001 23.301 3.16051 23.5703 3.43351C23.8395 3.69901 24 4.07401 24 4.50001Z"
+                  fill="black"
+                />
+              </svg>
+            </a>
+            <a target="_blank" href="https://github.com/MagalhaesDev">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 0C5.37 0 0 5.37 0 12C0 17.31 3.435 21.795 8.205 23.385C8.805 23.49 9.03 23.13 9.03 22.815C9.03 22.53 9.015 21.585 9.015 20.58C6 21.135 5.22 19.845 4.98 19.17C4.845 18.825 4.26 17.76 3.75 17.475C3.33 17.25 2.73 16.695 3.735 16.68C4.68 16.665 5.355 17.55 5.58 17.91C6.66 19.725 8.385 19.215 9.075 18.9C9.18 18.12 9.495 17.595 9.84 17.295C7.17 16.995 4.38 15.96 4.38 11.37C4.38 10.065 4.845 8.985 5.61 8.145C5.49 7.845 5.07 6.615 5.73 4.965C5.73 4.965 6.735 4.65 9.03 6.195C9.99 5.925 11.01 5.79 12.03 5.79C13.05 5.79 14.07 5.925 15.03 6.195C17.325 4.635 18.33 4.965 18.33 4.965C18.99 6.615 18.57 7.845 18.45 8.145C19.215 8.985 19.68 10.05 19.68 11.37C19.68 15.975 16.875 16.995 14.205 17.295C14.64 17.67 15.015 18.39 15.015 19.515C15.015 21.12 15 22.41 15 22.815C15 23.13 15.225 23.505 15.825 23.385C18.2072 22.5807 20.2772 21.0497 21.7437 19.0074C23.2101 16.965 23.9993 14.5143 24 12C24 5.37 18.63 0 12 0Z"
+                  fill="black"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="img-face">
+          <img src="assets/face.png" alt="imagem do meu rosto" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="about">
+        <div class="section-one">
+          <h2>Sobre</h2>
+          <p>Introdução</p>
+
+          <div class="about">
+            <div class="img-about">
+              <img src="assets/border-about.png" alt="" />
+            </div>
+            <p>
+              Me chamo Mateus Magalhaes e sou desenvolvedor frontend, começei na
+              área da programação no ano passado e desde então venho me
+              apaixonando cada dia mais pela mesma, busco sempre em meus
+              projetos utilizar de boas ferramentas e práticas para chegar no
+              melhor resultado possivel, visando sempre a performance,
+              acessibilidade, responsividade e um bom SEO .
+            </p>
+            <div class="button-download">
+              <a href="#">
+                Download CV
+                <img src="assets/download.svg" alt="nuvem de download" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="portfolio">
+        <div class="introduction">
+          <h2>Portfólio</h2>
+          <p>Projetos</p>
+        </div>
+        <div class="section-two">
+          <div class="container">
+            <input type="radio" name="slider" id="item-1" checked />
+            <input type="radio" name="slider" id="item-2" />
+            <input type="radio" name="slider" id="item-3" />
+            <div class="cards">
+              <label for="item-1" class="card" id="song-1">
+                <div class="content"></div>
+              </label>
+              <label for="item-2" class="card" id="song-2">
+                <div class="content"></div>
+              </label>
+              <label for="item-3" class="card" id="song-3">
+                <div class="content"></div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="knowledge">
+        <div class="section-three">
+          <h2>Conhecimentos</h2>
+          <p>Tecnologias</p>
+          <div class="container-techs">
+            <div class="item">
+              <div class="img-item">
+                <img src="assets/javascript.svg" alt="react" />
+              </div>
+              <div>
+                <strong>Javascript</strong>
+              </div>
+            </div>
+            <div class="item">
+              <div class="img-item">
+                <img src="assets/typescript.svg" alt="react" />
+              </div>
+              <div>
+                <strong>Typescript</strong>
+              </div>
+            </div>
+            <div class="item">
+              <div class="img-item">
+                <img src="assets/react.svg" alt="react" />
+              </div>
+              <div>
+                <strong>React</strong>
+              </div>
+            </div>
+            <div class="item">
+              <div class="img-item">
+                <img src="assets/nextjs.svg" alt="react" />
+              </div>
+              <div>
+                <strong>NextJs</strong>
+              </div>
+            </div>
+            <div class="item">
+              <div class="img-item">
+                <img src="assets/tailwindcss.svg" alt="react" />
+              </div>
+              <div>
+                <strong>TailwindCSS</strong>
+              </div>
+            </div>
+            <div class="item">
+              <div class="img-item">
+                <img src="assets/bootstrap.svg" alt="react" />
+              </div>
+              <div>
+                <strong>Bootstrap</strong>
+              </div>
+            </div>
+            <div class="item">
+              <div class="img-item">
+                <img src="assets/jest.svg" alt="react" />
+              </div>
+              <div>
+                <strong>Jest</strong>
+              </div>
+            </div>
+            <div class="item">
+              <div class="img-item">
+                <img src="assets/html.svg" alt="react" />
+              </div>
+              <div>
+                <strong>HTML</strong>
+              </div>
+            </div>
+            <div class="item">
+              <div class="img-item">
+                <img src="assets/css.svg" alt="react" />
+              </div>
+              <div>
+                <strong>CSS</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="section-four">
+          <h2>Contato</h2>
+          <div class="contact">
+            <div class="form-contact">
+              <form action="">
+                <div>
+                  <input
+                    type="text"
+                    name="name="
+                    id="name"
+                    placeholder="Nome"
+                  />
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                  />
+                </div>
+                <input
+                  type="text"
+                  name="assunto"
+                  id="assunto"
+                  placeholder="Assunto"
+                />
+                <textarea
+                  maxlength="531"
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Mensagem"
+                ></textarea>
+                <button type="submit">Enviar Mensagem</button>
+              </form>
+            </div>
+            <div class="contact-phone">
+              <div class="item">
+                <img src="assets/phone.svg" alt="telefone" />
+                <div>
+                  <h3>Telefone</h3>
+                  <p>(19)98324-2682</p>
+                </div>
+              </div>
+              <div class="item">
+                <img src="assets/email.svg" alt="email" />
+                <div>
+                  <h3>Email</h3>
+                  <p>mateusmagalhaesemidio@gmail.com</p>
+                </div>
+              </div>
+              <div class="item">
+                <img src="assets/map.svg" alt="localização" />
+                <div>
+                  <h3>Localização</h3>
+                  <p>Indaiatuba - São Paulo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <h3>
+        Feito com 🖤 por
+        <a href="https://www.instagram.com/mateus.magalhaes2/"
+          >Mateus Magalhaes</a
+        >
+      </h3>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
