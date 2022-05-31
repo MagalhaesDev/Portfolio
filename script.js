@@ -98,7 +98,6 @@ ScrollReveal().reveal(
   `.social-media, .container, .container-techs .item`,
   scrollRevealBottom
 );
-
 // TypedJS
 
 let typed = new Typed(".type", {

@@ -192,7 +192,6 @@ header nav .navegation ul li a:hover::after {
   position: absolute;
   bottom: 0;
 }
-
 .header .presentation .social-media svg {
   margin-right: 1.5rem;
 }
