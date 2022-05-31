@@ -50,3 +50,58 @@ function themaAlternation() {
     /> `;
   }
 }
+
+// ScrollRevealJS
+
+const scrollRevealTop = {
+  origin: "top",
+  distance: "30px",
+  duration: 1500,
+  reset: true,
+};
+
+const scrollRevealLeft = {
+  origin: "left",
+  distance: "30px",
+  duration: 1500,
+  reset: true,
+};
+
+const scrollRevealRight = {
+  origin: "right",
+  distance: "30px",
+  duration: 1500,
+  reset: true,
+};
+
+const scrollRevealBottom = {
+  origin: "bottom",
+  distance: "30px",
+  duration: 1500,
+  reset: true,
+};
+
+ScrollReveal().reveal(`.section-four h2`, scrollRevealTop);
+
+ScrollReveal().reveal(
+  `.message-introduction, .section-one h2, .section-one p, .section-three h2, .section-three p,
+   .form-contact`,
+  scrollRevealLeft
+);
+
+ScrollReveal().reveal(
+  `.img-face, .about p,#portfolio .introduction, .contact-phone`,
+  scrollRevealRight
+);
+
+ScrollReveal().reveal(
+  `.social-media, .container, .container-techs .item`,
+  scrollRevealBottom
+);
+
+// TypedJS
+
+let typed = new Typed(".type", {
+  strings: ["Mateus Magalhaes"],
+  typeSpeed: 150,
+});

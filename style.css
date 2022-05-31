@@ -83,7 +83,6 @@ html {
 
 header nav {
   display: flex;
-
   justify-content: space-between;
   align-items: center;
 }
@@ -178,11 +177,15 @@ header nav .navegation ul li a:hover::after {
   border-radius: 0.25rem;
   background-color: var(--primary-color);
   color: var(--white);
-  transition: filter 500ms;
+  transition: background 500ms;
+}
+
+.header .presentation .message-introduction button a {
+  color: white;
 }
 
 .header .presentation .message-introduction button:hover {
-  filter: brightness(0.9);
+  background-color: #1f1255;
 }
 
 .header .presentation .social-media {
@@ -196,6 +199,11 @@ header nav .navegation ul li a:hover::after {
 
 .header .presentation .social-media svg path {
   fill: black;
+  transition: fill 0.3s;
+}
+
+.header .presentation .social-media svg:hover path {
+  fill: var(--primary-color);
 }
 
 .header .img-face img,
@@ -530,6 +538,10 @@ body.thema-dark header .header .presentation .social-media svg path {
   fill: white;
 }
 
+body.thema-dark .header .presentation .social-media svg:hover path {
+  fill: var(--primary-color);
+}
+
 body.thema-dark main section .about p {
   color: #fff;
 }
@@ -545,6 +557,7 @@ body.thema-dark header nav .navegation.open-modal {
 body.thema-dark footer {
   color: #fff;
 }
+
 /* ============= MEDIAS QUERIES ============= */
 
 @media (max-width: 1183px) {
@@ -582,7 +595,7 @@ body.thema-dark footer {
   }
 
   header nav .navegation.open-modal ul a {
-    font-size: 2.25rem;
+    font-size: 1.5rem;
   }
 
   .header .presentation .social-media {
@@ -631,5 +644,38 @@ body.thema-dark footer {
 
   main .section-three .container-techs {
     width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .header .presentation .message-introduction h1 {
+    font-size: 1.75rem;
+  }
+  .header .presentation .message-introduction {
+    width: 20rem;
+  }
+
+  .content {
+    height: 20rem;
+  }
+
+  .cards {
+    min-height: 25rem;
+  }
+
+  main .section-one h2,
+  section .introduction h2,
+  main .section-three h2,
+  main .section-four h2 {
+    font-size: 2.5rem;
+  }
+
+  main .section-three .container-techs .item {
+    width: 7rem;
+    height: 8.5rem;
+  }
+
+  main .section-four .contact .contact-phone .item img {
+    width: 30px;
   }
 }
