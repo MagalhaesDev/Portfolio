@@ -101,6 +101,6 @@ ScrollReveal().reveal(
 // TypedJS
 
 let typed = new Typed(".type", {
-  strings: ["Mateus Magalhaes"],
+  strings: ["Mateus Magalhães"],
   typeSpeed: 150,
 });

@@ -9,6 +9,7 @@
 :root {
   --background: #e1e1e1;
   --primary-color: #4024ad;
+  --button-hover: #2b1879;
   --black: #000000;
   --white: #ffffff;
   --gray: #d9d9d9;
@@ -87,7 +88,7 @@ header nav {
   align-items: center;
 }
 
-header nav .logo strong {
+header nav .logo h1 {
   font-size: 1.5rem;
   color: var(--primary-color);
 }
@@ -150,14 +151,14 @@ header nav .navegation ul li a:hover::after {
   font-size: 1.25rem;
 }
 
-.header .presentation .message-introduction h1 {
+.header .presentation .message-introduction strong {
   font-size: 2.25rem;
   color: var(--primary-color);
   text-shadow: #000000 1px 1px 3px;
   margin-bottom: -0.5rem;
 }
 
-.header .presentation .message-introduction strong {
+.header .presentation .message-introduction h2 {
   font-size: 1.3rem;
   font-weight: 400;
   color: var(--primary-color);
@@ -168,9 +169,10 @@ header nav .navegation ul li a:hover::after {
   padding: 0.5rem 0rem;
   color: var(--small-text);
   font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
-.header .presentation .message-introduction button {
+.header .presentation .message-introduction a {
   padding: 0.75rem 1.75rem;
   font-weight: 600;
   border: none;
@@ -180,12 +182,12 @@ header nav .navegation ul li a:hover::after {
   transition: background 500ms;
 }
 
-.header .presentation .message-introduction button a {
+.header .presentation .message-introduction a {
   color: white;
 }
 
-.header .presentation .message-introduction button:hover {
-  background-color: #1f1255;
+.header .presentation .message-introduction a:hover {
+  background-color: var(--button-hover);
 }
 
 .header .presentation .social-media {
@@ -270,6 +272,7 @@ main section .img-about {
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: -1;
   transform: translate(-50%, -50%);
 }
 
@@ -277,7 +280,7 @@ main section .about .button-download a {
   background-color: var(--primary-color);
   border: none;
   border-radius: 0.3rem;
-  color: white;
+  color: #ffff;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -286,6 +289,11 @@ main section .about .button-download a {
   font-weight: 600;
   padding: 0 0.75rem;
   cursor: pointer;
+  transition: background 0.5s;
+}
+
+main section .about .button-download a:hover {
+  background-color: var(--button-hover);
 }
 
 /* ============= PORTFOLIO ============= */
@@ -309,7 +317,7 @@ section .introduction p {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px 10px;
+  padding: 1.875rem 0.625rem;
   transition: background 0.4s ease-in;
   margin-top: 4rem;
 }
@@ -342,10 +350,46 @@ input[type="radio"] {
 }
 
 .content {
-  background-color: var(--primary-color);
-  height: 25rem;
+  background-color: white;
   border-radius: 0.4rem;
-  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.content .title-card {
+  color: var(--primary-color);
+}
+
+.content .img-card,
+.content .img-card img {
+  width: 100%;
+  height: 7rem;
+  object-fit: cover;
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+
+.content .description-card {
+  text-align: center;
+  padding: 0rem 5rem;
+}
+
+.content .button-card {
+  background-color: var(--primary-color);
+  padding: 0.5rem 2rem;
+  border-radius: 0.35rem;
+  transition: background 0.5s;
+  margin-bottom: 1rem;
+}
+
+.content .button-card:hover {
+  background-color: var(--button-hover);
+}
+
+.content .button-card a {
+  color: #ffff;
+  font-weight: 500;
 }
 
 #item-1:checked ~ .cards #song-3,
@@ -431,8 +475,8 @@ main .section-three .container-techs .item {
 
 main .section-three .container-techs .item img,
 main .section-three .container-techs .item .img-item {
-  width: 57px;
-  height: 57px;
+  width: 3.5625rem;
+  height: 3.5625rem;
 }
 
 /* ============= CONTACT ============= */
@@ -490,7 +534,7 @@ main .section-four .contact .form-contact form button:hover {
 }
 
 main .section-four .contact .contact-phone .item img {
-  width: 40px;
+  width: 2.5rem;
 }
 
 main .section-four .contact .contact-phone .item {
@@ -501,7 +545,7 @@ main .section-four .contact .contact-phone .item {
 }
 
 main .section-four .contact .contact-phone .item div {
-  height: 40px;
+  height: 2.5rem;
   padding-left: 1rem;
 }
 
@@ -567,6 +611,10 @@ body.thema-dark footer {
 }
 
 @media (max-width: 1103px) {
+  html {
+    font-size: 87.5%;
+  }
+
   header nav .menu {
     display: block;
   }
@@ -646,7 +694,25 @@ body.thema-dark footer {
   }
 }
 
+@media (max-width: 700px) {
+  .content {
+    font-size: 0.75rem;
+  }
+
+  .content .description-card {
+    padding: 0.25rem;
+  }
+}
+
 @media (max-width: 360px) {
+  .content {
+    font-size: 0.5rem;
+  }
+
+  .content .description-card {
+    padding: 0;
+  }
+
   .header .presentation .message-introduction h1 {
     font-size: 1.75rem;
   }
@@ -675,6 +741,9 @@ body.thema-dark footer {
   }
 
   main .section-four .contact .contact-phone .item img {
-    width: 30px;
+    width: 1.875rem;
   }
+}
+
+@media (max-width: 768px) {
 }
